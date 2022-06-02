@@ -3,10 +3,7 @@ from django.shortcuts import render
 from . models import place
 # Create your views he
 def fun(req):
-    obj=place()
-    obj.name='Kerala'
-    obj.price=100
-    obj.desc='God\'s Own country'
+    obj=place.objects.all()
 
-    return render(req,"index.html",{'result':obj})
+    return render(req,"index.html",{'results':obj})
     #return HttpResponse("Hello World")
