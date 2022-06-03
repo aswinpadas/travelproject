@@ -29,5 +29,8 @@ def register(req):
         return redirect('/')
     else:
         return render(req,'registration.html')
+def logout(req):
+    auth.logout(req)
+    return  redirect('/')
 
 # Create your views here.
