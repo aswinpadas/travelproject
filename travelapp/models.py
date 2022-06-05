@@ -7,3 +7,10 @@ class place(models.Model):
     desc=models.TextField()
     price=models.IntegerField()
     offer=models.BooleanField(default=False)
+class blog(models.Model):
+    date=models.DateField()
+    #day=date.day
+    blog_img=models.ImageField(upload_to='pictures')
+    news_post_title=models.CharField(max_length=50);
+    news_post_category=models.CharField(max_length=30)
+    news_post_content=models.TextField()
