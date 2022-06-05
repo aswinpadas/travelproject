@@ -1,3 +1,5 @@
 # travelproject
 
-leaning DJango
+leaning DJango and python
+also git 
+ 
