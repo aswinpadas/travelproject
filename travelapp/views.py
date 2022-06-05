@@ -8,4 +8,5 @@ def fun(req):
     #return HttpResponse("Hello World")
 def funBlogRender(req):
     obj_blog = place.objects.all()
+    print(obj_blog.day)
     render(req,"index.html", {'blog_results': obj_blog})

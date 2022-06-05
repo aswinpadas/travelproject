@@ -397,32 +397,33 @@
 	</div>
 
 	<!-- News -->
-	{% for result in blog_results %}
+
 	<div class="news" id="news">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-8">
 					<div class="news_container">
-						
+						{% for result in blog_results %}
 						<!-- News Post -->
 						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
-							<div class="news_post_image"><img src="{% static 'images/news_1.jpg'%}" alt=""></div>
+							<div class="news_post_image"><img src={{result.img.url}} alt=""></div>
 							<div class="news_post_content">
 								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
-									<div>02</div>
-									<div>june</div>
+									<div>{{result.date}}</div>
+									<div>{{result.date}}</div>
 								</div>
-								<div class="news_post_title"><a href="#">Best tips to travel light</a></div>
+								<div class="news_post_title"><a href="#">{{result.news_post_title}}</a></div>
 								<div class="news_post_category">
 									<ul>
-										<li><a href="#">lifestyle & travel</a></li>
+										<li><a href="#">{{result.news_post_category}}</a></li>
 									</ul>
 								</div>
 								<div class="news_post_text">
-									<p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
+									<p>{{result.news_post_content}}</p>
 								</div>
 							</div>
 						</div>
+						{% endfor %}
 					</div>
 				</div>
 
@@ -449,7 +450,6 @@
 			</div>
 		</div>
 	</div>
-	{% endfor %}
 	<!-- Footer -->
 
 	<footer class="footer">
