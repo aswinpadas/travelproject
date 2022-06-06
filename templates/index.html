@@ -397,22 +397,21 @@
 	</div>
 
 	<!-- News -->
-
 	<div class="news" id="news">
 		<div class="container">
 			<div class="row">
 				<div class="col-xl-8">
 					<div class="news_container">
-						{% for result in blog_results %}
 						<!-- News Post -->
+						{% for result in blog_results %}
 						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
-							<div class="news_post_image"><img src={{result.img.url}} alt=""></div>
+							<div class="news_post_image"><img src={{result.blog_img.url}} alt=""></div>
 							<div class="news_post_content">
 								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
 									<div>{{result.date}}</div>
 									<div>{{result.date}}</div>
 								</div>
-								<div class="news_post_title"><a href="#">{{result.news_post_title}}</a></div>
+								<div class="news_post_title"><a>{{result.news_post_title}}</a></div>
 								<div class="news_post_category">
 									<ul>
 										<li><a href="#">{{result.news_post_category}}</a></li>
@@ -450,6 +449,7 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- Footer -->
 
 	<footer class="footer">
