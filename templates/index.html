@@ -402,23 +402,25 @@
 			<div class="row">
 				<div class="col-xl-8">
 					<div class="news_container">
+						{% for results in blog_results %}
 						<!-- News Post -->
-						{% for result in blog_results %}
 						<div class="news_post d-flex flex-md-row flex-column align-items-start justify-content-start">
-							<div class="news_post_image"><img src={{result.blog_img.url}} alt=""></div>
+							<div class="news_post_image"><img src={{results.blog_img.url}} alt=""></div>
 							<div class="news_post_content">
 								<div class="news_post_date d-flex flex-row align-items-end justify-content-start">
-									<div>{{result.date}}</div>
-									<div>{{result.date}}</div>
+
+<!--									<div>{{results.day}}</div>-->
+									<div>{{results.date}}</div>
+
 								</div>
-								<div class="news_post_title"><a>{{result.news_post_title}}</a></div>
+								<div class="news_post_title"><a href="#">{{results.news_post_title}}</a></div>
 								<div class="news_post_category">
 									<ul>
-										<li><a href="#">{{result.news_post_category}}</a></li>
+										<li><a href="#">{{results.news_post_category}}</a></li>
 									</ul>
 								</div>
 								<div class="news_post_text">
-									<p>{{result.news_post_content}}</p>
+									<p>{{results.news_post_content}}</p>
 								</div>
 							</div>
 						</div>
@@ -429,7 +431,7 @@
 				<!-- News Sidebar -->
 				<div class="col-xl-4">
 					<div class="travello">
-						<div class="background_image" style="background-image:url({% static 'images/travello.jpg'%})"></div>
+						<div class="background_image" style="background-image:url(images/travello.jpg)"></div>
 						<div class="travello_content">
 							<div class="travello_content_inner">
 								<div></div>
@@ -449,7 +451,6 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- Footer -->
 
 	<footer class="footer">
